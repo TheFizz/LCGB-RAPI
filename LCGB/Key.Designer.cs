@@ -61,7 +61,7 @@ namespace LCGB {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to RGAPI-26cf9dfe-4924-4b85-8031-3c2c7087f40b.
+        ///   Looks up a localized string similar to RGAPI-APIKEYGOESHERE.
         /// </summary>
         internal static string apikey {
             get {
