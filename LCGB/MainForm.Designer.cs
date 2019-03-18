@@ -86,6 +86,8 @@
             this.T0P3Name = new System.Windows.Forms.Label();
             this.T0P3Rank = new System.Windows.Forms.Label();
             this.pT0 = new System.Windows.Forms.Panel();
+            this.T0P3Icon = new OvalPictureBox();
+            this.Ring0 = new OvalPictureBox();
             this.T0P4RankPic = new System.Windows.Forms.PictureBox();
             this.T0P2RankPic = new System.Windows.Forms.PictureBox();
             this.T0P0RankPic = new System.Windows.Forms.PictureBox();
@@ -98,6 +100,24 @@
             this.T1P1RankPic = new System.Windows.Forms.PictureBox();
             this.T1P0RankPic = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.T0P1Icon = new OvalPictureBox();
+            this.Ring1 = new OvalPictureBox();
+            this.T0P0Icon = new OvalPictureBox();
+            this.Ring2 = new OvalPictureBox();
+            this.T0P2Icon = new OvalPictureBox();
+            this.Ring3 = new OvalPictureBox();
+            this.T0P4Icon = new OvalPictureBox();
+            this.Ring4 = new OvalPictureBox();
+            this.T1P3Icon = new OvalPictureBox();
+            this.Ring5 = new OvalPictureBox();
+            this.T1P1Icon = new OvalPictureBox();
+            this.Ring6 = new OvalPictureBox();
+            this.T1P0Icon = new OvalPictureBox();
+            this.Ring7 = new OvalPictureBox();
+            this.T1P2Icon = new OvalPictureBox();
+            this.Ring8 = new OvalPictureBox();
+            this.T1P4Icon = new OvalPictureBox();
+            this.Ring9 = new OvalPictureBox();
             this.pSummoners.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P9Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P8Icon)).BeginInit();
@@ -110,6 +130,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.P1Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P0Icon)).BeginInit();
             this.pT0.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.T0P3Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.T0P4RankPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.T0P2RankPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.T0P0RankPic)).BeginInit();
@@ -122,6 +144,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.T1P1RankPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.T1P0RankPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T0P1Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T0P0Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T0P2Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T0P4Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T1P3Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T1P1Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T1P0Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T1P2Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T1P4Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring9)).BeginInit();
             this.SuspendLayout();
             // 
             // cbServer
@@ -781,6 +821,16 @@
             // 
             // pT0
             // 
+            this.pT0.Controls.Add(this.T0P4Icon);
+            this.pT0.Controls.Add(this.Ring4);
+            this.pT0.Controls.Add(this.T0P2Icon);
+            this.pT0.Controls.Add(this.Ring3);
+            this.pT0.Controls.Add(this.T0P0Icon);
+            this.pT0.Controls.Add(this.Ring2);
+            this.pT0.Controls.Add(this.T0P1Icon);
+            this.pT0.Controls.Add(this.Ring1);
+            this.pT0.Controls.Add(this.T0P3Icon);
+            this.pT0.Controls.Add(this.Ring0);
             this.pT0.Controls.Add(this.T0P4Name);
             this.pT0.Controls.Add(this.T0P3Rank);
             this.pT0.Controls.Add(this.T0P4Rank);
@@ -800,6 +850,28 @@
             this.pT0.Name = "pT0";
             this.pT0.Size = new System.Drawing.Size(771, 181);
             this.pT0.TabIndex = 93;
+            // 
+            // T0P3Icon
+            // 
+            this.T0P3Icon.BackColor = System.Drawing.Color.DarkGray;
+            this.T0P3Icon.ImageLocation = "https://opgg-static.akamaized.net/images/profile_icons/profileIcon3884.jpg";
+            this.T0P3Icon.Location = new System.Drawing.Point(64, 86);
+            this.T0P3Icon.Name = "T0P3Icon";
+            this.T0P3Icon.Size = new System.Drawing.Size(46, 46);
+            this.T0P3Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T0P3Icon.TabIndex = 94;
+            this.T0P3Icon.TabStop = false;
+            // 
+            // Ring0
+            // 
+            this.Ring0.BackColor = System.Drawing.Color.DarkGray;
+            this.Ring0.Image = global::LCGB.Properties.Resources.ring;
+            this.Ring0.Location = new System.Drawing.Point(57, 79);
+            this.Ring0.Name = "Ring0";
+            this.Ring0.Size = new System.Drawing.Size(60, 60);
+            this.Ring0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ring0.TabIndex = 92;
+            this.Ring0.TabStop = false;
             // 
             // T0P4RankPic
             // 
@@ -868,6 +940,16 @@
             // 
             // pT1
             // 
+            this.pT1.Controls.Add(this.T1P4Icon);
+            this.pT1.Controls.Add(this.Ring9);
+            this.pT1.Controls.Add(this.T1P2Icon);
+            this.pT1.Controls.Add(this.Ring8);
+            this.pT1.Controls.Add(this.T1P0Icon);
+            this.pT1.Controls.Add(this.Ring7);
+            this.pT1.Controls.Add(this.T1P1Icon);
+            this.pT1.Controls.Add(this.Ring6);
+            this.pT1.Controls.Add(this.T1P3Icon);
+            this.pT1.Controls.Add(this.Ring5);
             this.pT1.Controls.Add(this.T1P4Name);
             this.pT1.Controls.Add(this.T1P3Rank);
             this.pT1.Controls.Add(this.T1P4Rank);
@@ -956,12 +1038,210 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(256, 201);
+            this.pictureBox1.Location = new System.Drawing.Point(254, 201);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(768, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 95;
             this.pictureBox1.TabStop = false;
+            // 
+            // T0P1Icon
+            // 
+            this.T0P1Icon.BackColor = System.Drawing.Color.DarkGray;
+            this.T0P1Icon.ImageLocation = "https://opgg-static.akamaized.net/images/profile_icons/profileIcon3884.jpg";
+            this.T0P1Icon.Location = new System.Drawing.Point(215, 86);
+            this.T0P1Icon.Name = "T0P1Icon";
+            this.T0P1Icon.Size = new System.Drawing.Size(46, 46);
+            this.T0P1Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T0P1Icon.TabIndex = 96;
+            this.T0P1Icon.TabStop = false;
+            // 
+            // Ring1
+            // 
+            this.Ring1.BackColor = System.Drawing.Color.DarkGray;
+            this.Ring1.Image = global::LCGB.Properties.Resources.ring;
+            this.Ring1.Location = new System.Drawing.Point(208, 79);
+            this.Ring1.Name = "Ring1";
+            this.Ring1.Size = new System.Drawing.Size(60, 60);
+            this.Ring1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ring1.TabIndex = 95;
+            this.Ring1.TabStop = false;
+            // 
+            // T0P0Icon
+            // 
+            this.T0P0Icon.BackColor = System.Drawing.Color.DarkGray;
+            this.T0P0Icon.ImageLocation = "https://opgg-static.akamaized.net/images/profile_icons/profileIcon3884.jpg";
+            this.T0P0Icon.Location = new System.Drawing.Point(364, 86);
+            this.T0P0Icon.Name = "T0P0Icon";
+            this.T0P0Icon.Size = new System.Drawing.Size(46, 46);
+            this.T0P0Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T0P0Icon.TabIndex = 98;
+            this.T0P0Icon.TabStop = false;
+            // 
+            // Ring2
+            // 
+            this.Ring2.BackColor = System.Drawing.Color.DarkGray;
+            this.Ring2.Image = global::LCGB.Properties.Resources.ring;
+            this.Ring2.Location = new System.Drawing.Point(357, 79);
+            this.Ring2.Name = "Ring2";
+            this.Ring2.Size = new System.Drawing.Size(60, 60);
+            this.Ring2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ring2.TabIndex = 97;
+            this.Ring2.TabStop = false;
+            // 
+            // T0P2Icon
+            // 
+            this.T0P2Icon.BackColor = System.Drawing.Color.DarkGray;
+            this.T0P2Icon.ImageLocation = "https://opgg-static.akamaized.net/images/profile_icons/profileIcon3884.jpg";
+            this.T0P2Icon.Location = new System.Drawing.Point(514, 86);
+            this.T0P2Icon.Name = "T0P2Icon";
+            this.T0P2Icon.Size = new System.Drawing.Size(46, 46);
+            this.T0P2Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T0P2Icon.TabIndex = 100;
+            this.T0P2Icon.TabStop = false;
+            // 
+            // Ring3
+            // 
+            this.Ring3.BackColor = System.Drawing.Color.DarkGray;
+            this.Ring3.Image = global::LCGB.Properties.Resources.ring;
+            this.Ring3.Location = new System.Drawing.Point(507, 79);
+            this.Ring3.Name = "Ring3";
+            this.Ring3.Size = new System.Drawing.Size(60, 60);
+            this.Ring3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ring3.TabIndex = 99;
+            this.Ring3.TabStop = false;
+            // 
+            // T0P4Icon
+            // 
+            this.T0P4Icon.BackColor = System.Drawing.Color.DarkGray;
+            this.T0P4Icon.ImageLocation = "https://opgg-static.akamaized.net/images/profile_icons/profileIcon3884.jpg";
+            this.T0P4Icon.Location = new System.Drawing.Point(664, 86);
+            this.T0P4Icon.Name = "T0P4Icon";
+            this.T0P4Icon.Size = new System.Drawing.Size(46, 46);
+            this.T0P4Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T0P4Icon.TabIndex = 102;
+            this.T0P4Icon.TabStop = false;
+            // 
+            // Ring4
+            // 
+            this.Ring4.BackColor = System.Drawing.Color.DarkGray;
+            this.Ring4.Image = global::LCGB.Properties.Resources.ring;
+            this.Ring4.Location = new System.Drawing.Point(657, 79);
+            this.Ring4.Name = "Ring4";
+            this.Ring4.Size = new System.Drawing.Size(60, 60);
+            this.Ring4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ring4.TabIndex = 101;
+            this.Ring4.TabStop = false;
+            // 
+            // T1P3Icon
+            // 
+            this.T1P3Icon.BackColor = System.Drawing.Color.DarkGray;
+            this.T1P3Icon.ImageLocation = "https://opgg-static.akamaized.net/images/profile_icons/profileIcon3884.jpg";
+            this.T1P3Icon.Location = new System.Drawing.Point(64, 85);
+            this.T1P3Icon.Name = "T1P3Icon";
+            this.T1P3Icon.Size = new System.Drawing.Size(46, 46);
+            this.T1P3Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T1P3Icon.TabIndex = 104;
+            this.T1P3Icon.TabStop = false;
+            // 
+            // Ring5
+            // 
+            this.Ring5.BackColor = System.Drawing.Color.DarkGray;
+            this.Ring5.Image = global::LCGB.Properties.Resources.ring;
+            this.Ring5.Location = new System.Drawing.Point(57, 78);
+            this.Ring5.Name = "Ring5";
+            this.Ring5.Size = new System.Drawing.Size(60, 60);
+            this.Ring5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ring5.TabIndex = 103;
+            this.Ring5.TabStop = false;
+            // 
+            // T1P1Icon
+            // 
+            this.T1P1Icon.BackColor = System.Drawing.Color.DarkGray;
+            this.T1P1Icon.ImageLocation = "https://opgg-static.akamaized.net/images/profile_icons/profileIcon3884.jpg";
+            this.T1P1Icon.Location = new System.Drawing.Point(215, 85);
+            this.T1P1Icon.Name = "T1P1Icon";
+            this.T1P1Icon.Size = new System.Drawing.Size(46, 46);
+            this.T1P1Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T1P1Icon.TabIndex = 106;
+            this.T1P1Icon.TabStop = false;
+            // 
+            // Ring6
+            // 
+            this.Ring6.BackColor = System.Drawing.Color.DarkGray;
+            this.Ring6.Image = global::LCGB.Properties.Resources.ring;
+            this.Ring6.Location = new System.Drawing.Point(208, 78);
+            this.Ring6.Name = "Ring6";
+            this.Ring6.Size = new System.Drawing.Size(60, 60);
+            this.Ring6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ring6.TabIndex = 105;
+            this.Ring6.TabStop = false;
+            // 
+            // T1P0Icon
+            // 
+            this.T1P0Icon.BackColor = System.Drawing.Color.DarkGray;
+            this.T1P0Icon.ImageLocation = "https://opgg-static.akamaized.net/images/profile_icons/profileIcon3884.jpg";
+            this.T1P0Icon.Location = new System.Drawing.Point(364, 85);
+            this.T1P0Icon.Name = "T1P0Icon";
+            this.T1P0Icon.Size = new System.Drawing.Size(46, 46);
+            this.T1P0Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T1P0Icon.TabIndex = 108;
+            this.T1P0Icon.TabStop = false;
+            // 
+            // Ring7
+            // 
+            this.Ring7.BackColor = System.Drawing.Color.DarkGray;
+            this.Ring7.Image = global::LCGB.Properties.Resources.ring;
+            this.Ring7.Location = new System.Drawing.Point(357, 78);
+            this.Ring7.Name = "Ring7";
+            this.Ring7.Size = new System.Drawing.Size(60, 60);
+            this.Ring7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ring7.TabIndex = 107;
+            this.Ring7.TabStop = false;
+            // 
+            // T1P2Icon
+            // 
+            this.T1P2Icon.BackColor = System.Drawing.Color.DarkGray;
+            this.T1P2Icon.ImageLocation = "https://opgg-static.akamaized.net/images/profile_icons/profileIcon3884.jpg";
+            this.T1P2Icon.Location = new System.Drawing.Point(514, 85);
+            this.T1P2Icon.Name = "T1P2Icon";
+            this.T1P2Icon.Size = new System.Drawing.Size(46, 46);
+            this.T1P2Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T1P2Icon.TabIndex = 110;
+            this.T1P2Icon.TabStop = false;
+            // 
+            // Ring8
+            // 
+            this.Ring8.BackColor = System.Drawing.Color.DarkGray;
+            this.Ring8.Image = global::LCGB.Properties.Resources.ring;
+            this.Ring8.Location = new System.Drawing.Point(507, 78);
+            this.Ring8.Name = "Ring8";
+            this.Ring8.Size = new System.Drawing.Size(60, 60);
+            this.Ring8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ring8.TabIndex = 109;
+            this.Ring8.TabStop = false;
+            // 
+            // T1P4Icon
+            // 
+            this.T1P4Icon.BackColor = System.Drawing.Color.DarkGray;
+            this.T1P4Icon.ImageLocation = "https://opgg-static.akamaized.net/images/profile_icons/profileIcon3884.jpg";
+            this.T1P4Icon.Location = new System.Drawing.Point(664, 85);
+            this.T1P4Icon.Name = "T1P4Icon";
+            this.T1P4Icon.Size = new System.Drawing.Size(46, 46);
+            this.T1P4Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T1P4Icon.TabIndex = 112;
+            this.T1P4Icon.TabStop = false;
+            // 
+            // Ring9
+            // 
+            this.Ring9.BackColor = System.Drawing.Color.DarkGray;
+            this.Ring9.Image = global::LCGB.Properties.Resources.ring;
+            this.Ring9.Location = new System.Drawing.Point(657, 78);
+            this.Ring9.Name = "Ring9";
+            this.Ring9.Size = new System.Drawing.Size(60, 60);
+            this.Ring9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ring9.TabIndex = 111;
+            this.Ring9.TabStop = false;
             // 
             // MainForm
             // 
@@ -992,6 +1272,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.P1Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P0Icon)).EndInit();
             this.pT0.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.T0P3Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.T0P4RankPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.T0P2RankPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.T0P0RankPic)).EndInit();
@@ -1004,6 +1286,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.T1P1RankPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.T1P0RankPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T0P1Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T0P0Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T0P2Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T0P4Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T1P3Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T1P1Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T1P0Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T1P2Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T1P4Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ring9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1080,6 +1380,26 @@
         private System.Windows.Forms.Panel pT0;
         private System.Windows.Forms.Panel pT1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private OvalPictureBox Ring0;
+        private OvalPictureBox T0P3Icon;
+        private OvalPictureBox T0P4Icon;
+        private OvalPictureBox Ring4;
+        private OvalPictureBox T0P2Icon;
+        private OvalPictureBox Ring3;
+        private OvalPictureBox T0P0Icon;
+        private OvalPictureBox Ring2;
+        private OvalPictureBox T0P1Icon;
+        private OvalPictureBox Ring1;
+        private OvalPictureBox T1P4Icon;
+        private OvalPictureBox Ring9;
+        private OvalPictureBox T1P2Icon;
+        private OvalPictureBox Ring8;
+        private OvalPictureBox T1P0Icon;
+        private OvalPictureBox Ring7;
+        private OvalPictureBox T1P1Icon;
+        private OvalPictureBox Ring6;
+        private OvalPictureBox T1P3Icon;
+        private OvalPictureBox Ring5;
     }
 }
 
