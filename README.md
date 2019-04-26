@@ -20,5 +20,5 @@ How this works:
 
 10 summoners will be divided into 2 teams with ranks shown.
 
-If you happen to notice something like =*{rank}*=, it means that the displayed rank is the rank of the previous season.
+If you happen to notice something like =\*{rank}\*=, it means that the displayed rank is the rank of the previous season.
 
