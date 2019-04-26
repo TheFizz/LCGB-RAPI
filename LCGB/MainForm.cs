@@ -25,7 +25,6 @@ namespace LCGB
         {
             InitializeComponent();
             client.InitializeClient();
-            client.CheckKey();
             DeclareServers();
         }
         public void DeclareServers()
@@ -55,7 +54,7 @@ namespace LCGB
             {
                 if (sum.nickname == summoner.Name)
                 {
-                    MessageBox.Show("Player is already in pool.", "ERROR");
+                    MessageBox.Show("Player is already in pool.", "Warning");
                     return;
                 }
             }
@@ -287,5 +286,9 @@ namespace LCGB
             }
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.reddit.com/user/TheFizz94");
+        }
     }
 }

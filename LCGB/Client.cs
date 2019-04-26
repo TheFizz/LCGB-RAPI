@@ -20,15 +20,6 @@ namespace LCGB
                 ApiKey = LCGB.Key.apikey
             });
         }
-        public void CheckKey()
-        {
-            try { var check = _client.GetFeaturedGamesAsync("NA1").Result; }
-            catch
-            {
-                MessageBox.Show("API Key invalid", "ERROR");
-                Environment.Exit(0);
-            }
-        }
         public Summoner GetSummoner(string nickname, string server)
         {
             Summoner summoner = _client.GetSummonerBySummonerNameAsync(nickname, server).Result;

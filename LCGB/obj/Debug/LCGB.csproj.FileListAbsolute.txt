@@ -1,0 +1,14 @@
+D:\Prog\RAPI\LCGB\LCGB\bin\Debug\Newtonsoft.Json.xml
+D:\Prog\RAPI\LCGB\LCGB\bin\Debug\RiotNet.xml
+D:\Prog\RAPI\LCGB\LCGB\obj\Debug\LCGB.Key.resources
+D:\Prog\RAPI\LCGB\LCGB\obj\Debug\LCGB.MainForm.resources
+D:\Prog\RAPI\LCGB\LCGB\obj\Debug\LCGB.Properties.Resources.resources
+D:\Prog\RAPI\LCGB\LCGB\obj\Debug\LCGB.csproj.GenerateResource.cache
+D:\Prog\RAPI\LCGB\LCGB\obj\Debug\LCGB.csproj.CoreCompileInputs.cache
+D:\Prog\RAPI\LCGB\LCGB\obj\Debug\LCGB.csproj.CopyComplete
+D:\Prog\RAPI\LCGB\LCGB\obj\Debug\LCGB.csproj.Fody.CopyLocal.cache
+D:\Prog\RAPI\LCGB\LCGB\bin\Debug\LCGB v1.0.0.0.exe.config
+D:\Prog\RAPI\LCGB\LCGB\bin\Debug\LCGB v1.0.0.0.exe
+D:\Prog\RAPI\LCGB\LCGB\bin\Debug\LCGB v1.0.0.0.pdb
+D:\Prog\RAPI\LCGB\LCGB\obj\Debug\LCGB v1.0.0.0.exe
+D:\Prog\RAPI\LCGB\LCGB\obj\Debug\LCGB v1.0.0.0.pdb

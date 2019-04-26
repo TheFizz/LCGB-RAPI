@@ -118,6 +118,7 @@
             this.T1P1RankPic = new System.Windows.Forms.PictureBox();
             this.T1P0RankPic = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pSummoners.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P9Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P8Icon)).BeginInit();
@@ -180,14 +181,14 @@
             this.tbNickname.Location = new System.Drawing.Point(15, 41);
             this.tbNickname.Name = "tbNickname";
             this.tbNickname.Size = new System.Drawing.Size(168, 20);
-            this.tbNickname.TabIndex = 0;
+            this.tbNickname.TabIndex = 1;
             // 
             // bAdd
             // 
             this.bAdd.Location = new System.Drawing.Point(189, 40);
             this.bAdd.Name = "bAdd";
             this.bAdd.Size = new System.Drawing.Size(42, 22);
-            this.bAdd.TabIndex = 1;
+            this.bAdd.TabIndex = 2;
             this.bAdd.Text = "ADD";
             this.bAdd.UseVisualStyleBackColor = true;
             this.bAdd.Click += new System.EventHandler(this.bAdd_Click);
@@ -245,7 +246,7 @@
             this.bDel9.Location = new System.Drawing.Point(195, 254);
             this.bDel9.Name = "bDel9";
             this.bDel9.Size = new System.Drawing.Size(24, 24);
-            this.bDel9.TabIndex = 39;
+            this.bDel9.TabIndex = 12;
             this.bDel9.Text = "X";
             this.bDel9.UseVisualStyleBackColor = true;
             this.bDel9.Visible = false;
@@ -257,7 +258,7 @@
             this.bDel8.Location = new System.Drawing.Point(195, 226);
             this.bDel8.Name = "bDel8";
             this.bDel8.Size = new System.Drawing.Size(24, 24);
-            this.bDel8.TabIndex = 38;
+            this.bDel8.TabIndex = 11;
             this.bDel8.Text = "X";
             this.bDel8.UseVisualStyleBackColor = true;
             this.bDel8.Visible = false;
@@ -269,7 +270,7 @@
             this.bDel7.Location = new System.Drawing.Point(195, 198);
             this.bDel7.Name = "bDel7";
             this.bDel7.Size = new System.Drawing.Size(24, 24);
-            this.bDel7.TabIndex = 37;
+            this.bDel7.TabIndex = 10;
             this.bDel7.Text = "X";
             this.bDel7.UseVisualStyleBackColor = true;
             this.bDel7.Visible = false;
@@ -281,7 +282,7 @@
             this.bDel6.Location = new System.Drawing.Point(195, 170);
             this.bDel6.Name = "bDel6";
             this.bDel6.Size = new System.Drawing.Size(24, 24);
-            this.bDel6.TabIndex = 36;
+            this.bDel6.TabIndex = 9;
             this.bDel6.Text = "X";
             this.bDel6.UseVisualStyleBackColor = true;
             this.bDel6.Visible = false;
@@ -293,7 +294,7 @@
             this.bDel5.Location = new System.Drawing.Point(195, 142);
             this.bDel5.Name = "bDel5";
             this.bDel5.Size = new System.Drawing.Size(24, 24);
-            this.bDel5.TabIndex = 35;
+            this.bDel5.TabIndex = 8;
             this.bDel5.Text = "X";
             this.bDel5.UseVisualStyleBackColor = true;
             this.bDel5.Visible = false;
@@ -305,7 +306,7 @@
             this.bDel4.Location = new System.Drawing.Point(195, 114);
             this.bDel4.Name = "bDel4";
             this.bDel4.Size = new System.Drawing.Size(24, 24);
-            this.bDel4.TabIndex = 34;
+            this.bDel4.TabIndex = 7;
             this.bDel4.Text = "X";
             this.bDel4.UseVisualStyleBackColor = true;
             this.bDel4.Visible = false;
@@ -317,7 +318,7 @@
             this.bDel3.Location = new System.Drawing.Point(195, 86);
             this.bDel3.Name = "bDel3";
             this.bDel3.Size = new System.Drawing.Size(24, 24);
-            this.bDel3.TabIndex = 33;
+            this.bDel3.TabIndex = 6;
             this.bDel3.Text = "X";
             this.bDel3.UseVisualStyleBackColor = true;
             this.bDel3.Visible = false;
@@ -329,7 +330,7 @@
             this.bDel2.Location = new System.Drawing.Point(195, 58);
             this.bDel2.Name = "bDel2";
             this.bDel2.Size = new System.Drawing.Size(24, 24);
-            this.bDel2.TabIndex = 32;
+            this.bDel2.TabIndex = 5;
             this.bDel2.Text = "X";
             this.bDel2.UseVisualStyleBackColor = true;
             this.bDel2.Visible = false;
@@ -341,7 +342,7 @@
             this.bDel1.Location = new System.Drawing.Point(195, 30);
             this.bDel1.Name = "bDel1";
             this.bDel1.Size = new System.Drawing.Size(24, 24);
-            this.bDel1.TabIndex = 31;
+            this.bDel1.TabIndex = 4;
             this.bDel1.Text = "X";
             this.bDel1.UseVisualStyleBackColor = true;
             this.bDel1.Visible = false;
@@ -353,7 +354,7 @@
             this.bDel0.Location = new System.Drawing.Point(195, 2);
             this.bDel0.Name = "bDel0";
             this.bDel0.Size = new System.Drawing.Size(24, 24);
-            this.bDel0.TabIndex = 8;
+            this.bDel0.TabIndex = 3;
             this.bDel0.Text = "X";
             this.bDel0.UseVisualStyleBackColor = true;
             this.bDel0.Visible = false;
@@ -584,7 +585,7 @@
             this.bBalance.Location = new System.Drawing.Point(11, 359);
             this.bBalance.Name = "bBalance";
             this.bBalance.Size = new System.Drawing.Size(224, 53);
-            this.bBalance.TabIndex = 8;
+            this.bBalance.TabIndex = 13;
             this.bBalance.Text = "BALANCE";
             this.bBalance.UseVisualStyleBackColor = true;
             this.bBalance.Click += new System.EventHandler(this.bBalance_Click);
@@ -1253,12 +1254,25 @@
             this.pictureBox1.TabIndex = 95;
             this.pictureBox1.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(889, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(140, 13);
+            this.linkLabel1.TabIndex = 96;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Tag = "";
+            this.linkLabel1.Text = "Developed by TheFizz 2019";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // MainForm
             // 
             this.AcceptButton = this.bAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 421);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pT1);
             this.Controls.Add(this.pT0);
@@ -1268,8 +1282,10 @@
             this.Controls.Add(this.bAdd);
             this.Controls.Add(this.tbNickname);
             this.Controls.Add(this.cbServer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "LCGB v2.0.0.0";
+            this.Text = "LCGB v1.0.0.0";
             this.pSummoners.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.P9Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P8Icon)).EndInit();
@@ -1410,6 +1426,7 @@
         private OvalPictureBox Ring6;
         private OvalPictureBox T1P3Icon;
         private OvalPictureBox Ring5;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
