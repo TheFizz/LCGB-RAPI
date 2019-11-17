@@ -59,7 +59,7 @@ namespace LCGB
                 }
             }
             string iconurl = "https://opgg-static.akamaized.net/images/profile_icons/profileIcon" + summoner.ProfileIconId + ".jpg";
-            LeaguePosition league = client.GetLeaguePosition(summoner.Id, server);
+            LeagueEntry league = client.GetLeaguePosition(summoner.Id, server);
 
 
             if (league != null)

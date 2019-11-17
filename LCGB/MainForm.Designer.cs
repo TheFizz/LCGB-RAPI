@@ -1285,7 +1285,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "LCGB v1.0.0.0";
+            this.Text = "LCGB v1.0.1.0";
             this.pSummoners.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.P9Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P8Icon)).EndInit();

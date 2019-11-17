@@ -1,10 +1,6 @@
 ﻿using RiotNet;
 using RiotNet.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LCGB
@@ -31,10 +27,10 @@ namespace LCGB
                 return summoner;
             }
         }
-        public LeaguePosition GetLeaguePosition(string summonerId, string server)
+        public LeagueEntry GetLeaguePosition(string summonerId, string server)
         {
-            List<LeaguePosition> leagues = _client.GetLeaguePositionsBySummonerIdAsync(summonerId, server).Result;
-            foreach(LeaguePosition league in leagues)
+            List<LeagueEntry> leagues = _client.GetLeagueEntriesBySummonerIdAsync(summonerId, server).Result;
+            foreach(LeagueEntry league in leagues)
             {
                 if (league.QueueType == "RANKED_SOLO_5x5")
                 {

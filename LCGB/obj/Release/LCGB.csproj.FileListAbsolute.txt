@@ -12,3 +12,18 @@ D:\Prog\RAPI\LCGB\LCGB\bin\Release\LCGB v1.0.0.0.exe
 D:\Prog\RAPI\LCGB\LCGB\bin\Release\LCGB v1.0.0.0.pdb
 D:\Prog\RAPI\LCGB\LCGB\obj\Release\LCGB v1.0.0.0.exe
 D:\Prog\RAPI\LCGB\LCGB\obj\Release\LCGB v1.0.0.0.pdb
+E:\Projects\LCGB-RAPI-master\LCGB\bin\Release\Newtonsoft.Json.xml
+E:\Projects\LCGB-RAPI-master\LCGB\bin\Release\RiotNet.xml
+E:\Projects\LCGB-RAPI-master\LCGB\obj\Release\LCGB.Key.resources
+E:\Projects\LCGB-RAPI-master\LCGB\obj\Release\LCGB.MainForm.resources
+E:\Projects\LCGB-RAPI-master\LCGB\obj\Release\LCGB.Properties.Resources.resources
+E:\Projects\LCGB-RAPI-master\LCGB\obj\Release\LCGB.csproj.GenerateResource.cache
+E:\Projects\LCGB-RAPI-master\LCGB\obj\Release\LCGB.csproj.CoreCompileInputs.cache
+E:\Projects\LCGB-RAPI-master\LCGB\obj\Release\LCGB.csproj.Fody.CopyLocal.cache
+E:\Projects\LCGB-RAPI-master\LCGB\obj\Release\LCGB.csproj.CopyComplete
+E:\Projects\LCGB-RAPI-master\LCGB\bin\Release\LCGB v1.0.1.0.exe.config
+E:\Projects\LCGB-RAPI-master\LCGB\bin\Release\LCGB v1.0.1.0.exe
+E:\Projects\LCGB-RAPI-master\LCGB\bin\Release\LCGB v1.0.1.0.pdb
+E:\Projects\LCGB-RAPI-master\LCGB\obj\Release\LCGB.csprojAssemblyReference.cache
+E:\Projects\LCGB-RAPI-master\LCGB\obj\Release\LCGB v1.0.1.0.exe
+E:\Projects\LCGB-RAPI-master\LCGB\obj\Release\LCGB v1.0.1.0.pdb

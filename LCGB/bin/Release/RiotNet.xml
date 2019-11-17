@@ -656,7 +656,7 @@
         </member>
         <member name="P:RiotNet.Models.Champion.Id">
             <summary>
-            Gets or sets the champion id. This corresponds to a <see cref="T:RiotNet.Models.StaticChampion"/> ID.
+            Gets or sets the champion id.
             </summary>
         </member>
         <member name="P:RiotNet.Models.Champion.RankedPlayEnabled">
@@ -924,6 +924,16 @@
             PROJECT: Hunters
             </summary>
         </member>
+        <member name="F:RiotNet.Models.GameMode.GAMEMODEX">
+            <summary>
+            Nexus blitz
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.GameMode.ODYSSEY">
+            <summary>
+            Odyssey: Extraction
+            </summary>
+        </member>
         <member name="T:RiotNet.Models.GameType">
             <summary>
             Represents the game type.
@@ -985,7 +995,6 @@
             </summary>
             <remarks>
             This list contains all supported locales at the time of the RiotNet release.
-            If you want to iteralte over all currently supported locales, use <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>
             </remarks>
         </member>
         <member name="F:RiotNet.Models.Locale.cs_CZ">
@@ -1132,7 +1141,7 @@
             <summary>
             Gets the culture info for a locale.
             </summary>
-            <param name="locale">The locale (or language tag). This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
+            <param name="locale">The locale (or language tag). This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values.</param>
             <returns>The culture info.</returns>
         </member>
         <member name="T:RiotNet.Models.MapType">
@@ -1223,6 +1232,16 @@
         <member name="F:RiotNet.Models.MapId.SUBSTRUCTURE_43">
             <summary>
             Substructure 43 (PROJECT: Hunters)
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.MapId.CRASH_SITE">
+            <summary>
+            Crash Site (Odyssey: Extraction)
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.MapId.NEXUS_BLITZ">
+            <summary>
+            Nexus Blitz
             </summary>
         </member>
         <member name="T:RiotNet.Models.MatchRole">
@@ -1524,6 +1543,12 @@
             <param name="platformId">The platform ID.</param>
             <returns>true if the platform ID represents North America; otherwise false.</returns>
         </member>
+        <member name="M:RiotNet.Models.PlatformId.Standardize(System.String)">
+            <summary>
+            Standardizes a platform ID (Converts "NA" to "NA1").
+            </summary>
+            <param name="platformId">The platform ID.</param>
+        </member>
         <member name="T:RiotNet.Models.RegionalProxy">
             <summary>
             Represents a Regional Proxy service name.
@@ -1660,6 +1685,31 @@
         <member name="F:RiotNet.Models.Tier.IRON">
             <summary>
             Iron tier
+            </summary>
+        </member>
+        <member name="T:RiotNet.Models.Division">
+            <summary>
+            Represents a division within a ranked tier.
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.Division.I">
+            <summary>
+            Division 1
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.Division.II">
+            <summary>
+            Division 2
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.Division.III">
+            <summary>
+            Division 3
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.Division.IV">
+            <summary>
+            Division 4
             </summary>
         </member>
         <member name="T:RiotNet.Models.LanePosition">
@@ -1842,21 +1892,6 @@
             Historical Summoner's Rift Coop vs AI. This queue is deprecated.
             </summary>
         </member>
-        <member name="F:RiotNet.Models.QueueType.NORMAL_3x3">
-            <summary>
-            Normal 3v3
-            </summary>
-        </member>
-        <member name="F:RiotNet.Models.QueueType.RANKED_FLEX_TT">
-            <summary>
-            Ranked Flex 3v3. This was formerly called <see cref="F:RiotNet.Models.QueueType.RANKED_PREMADE_3x3"/>.
-            </summary>
-        </member>
-        <member name="F:RiotNet.Models.QueueType.RANKED_PREMADE_3x3">
-            <summary>
-            Ranked Flex 3v3. This is the old name for <see cref="F:RiotNet.Models.QueueType.RANKED_FLEX_TT"/>.
-            </summary>
-        </member>
         <member name="F:RiotNet.Models.QueueType.NORMAL_5x5_DRAFT">
             <summary>
             Normal 5v5 Draft Pick
@@ -1877,21 +1912,6 @@
             Dominion Coop vs AI
             </summary>
         </member>
-        <member name="F:RiotNet.Models.QueueType.BOT_5x5_INTRO">
-            <summary>
-            Summoner's Rift Coop vs AI Intro Bot
-            </summary>
-        </member>
-        <member name="F:RiotNet.Models.QueueType.BOT_5x5_BEGINNER">
-            <summary>
-            Summoner's Rift Coop vs AI Beginner Bot
-            </summary>
-        </member>
-        <member name="F:RiotNet.Models.QueueType.BOT_5x5_INTERMEDIATE">
-            <summary>
-            Summoner's Rift Coop vs AI Intermediate Bot
-            </summary>
-        </member>
         <member name="F:RiotNet.Models.QueueType.RANKED_TEAM_3x3">
             <summary>
             Ranked Team 3v3
@@ -1902,34 +1922,9 @@
             Ranked Team 5v5
             </summary>
         </member>
-        <member name="F:RiotNet.Models.QueueType.BOT_TT_3x3">
-            <summary>
-            Twisted Treeline Coop vs AI (Intermediate bots)
-            </summary>
-        </member>
-        <member name="F:RiotNet.Models.QueueType.BOT_TT_3x3_INTERMEDIATE">
-            <summary>
-            Twisted Treeline Coop vs AI (Intermediate bots)
-            </summary>
-        </member>
-        <member name="F:RiotNet.Models.QueueType.BOT_TT_3x3_INTRO">
-            <summary>
-            Twisted Treeline Coop vs AI (Intro bots)
-            </summary>
-        </member>
-        <member name="F:RiotNet.Models.QueueType.BOT_TT_3x3_BEGINNER">
-            <summary>
-            Twisted Treeline Coop vs AI (Beginner bots)
-            </summary>
-        </member>
         <member name="F:RiotNet.Models.QueueType.GROUP_FINDER_5x5">
             <summary>
             Team Builder
-            </summary>
-        </member>
-        <member name="F:RiotNet.Models.QueueType.ARAM_5x5">
-            <summary>
-            All Random All Mid
             </summary>
         </member>
         <member name="F:RiotNet.Models.QueueType.ONEFORALL_5x5">
@@ -1955,6 +1950,11 @@
         <member name="F:RiotNet.Models.QueueType.URF_5x5">
             <summary>
             Ultra Rapid Fire
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.ONEFOREALL_MIRROR">
+            <summary>
+            One for all: mirror mode
             </summary>
         </member>
         <member name="F:RiotNet.Models.QueueType.BOT_URF_5x5">
@@ -2007,11 +2007,6 @@
             Black Market Brawlers
             </summary>
         </member>
-        <member name="F:RiotNet.Models.QueueType.SIEGE">
-            <summary>
-            Nexus Siege
-            </summary>
-        </member>
         <member name="F:RiotNet.Models.QueueType.DEFINITELY_NOT_DOMINION_5x5">
             <summary>
             Definitely Not Dominion
@@ -2052,6 +2047,26 @@
             Ranked Flex Summoner's Rift
             </summary>
         </member>
+        <member name="F:RiotNet.Models.QueueType.ARAM_5x5">
+            <summary>
+            All Random All Mid
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.NORMAL_3x3">
+            <summary>
+            Normal 3v3
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.RANKED_FLEX_TT">
+            <summary>
+            Ranked Flex 3v3. This was formerly called <see cref="F:RiotNet.Models.QueueType.RANKED_PREMADE_3x3"/>.
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.RANKED_PREMADE_3x3">
+            <summary>
+            Ranked Flex 3v3. This is the old name for <see cref="F:RiotNet.Models.QueueType.RANKED_FLEX_TT"/>.
+            </summary>
+        </member>
         <member name="F:RiotNet.Models.QueueType.ASSASSINATE_5x5">
             <summary>
             Blood Hunt Assassin
@@ -2065,6 +2080,41 @@
         <member name="F:RiotNet.Models.QueueType.CLASH">
             <summary>
             Summoner's Rift Clash Games
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.BOT_TT_3x3">
+            <summary>
+            Twisted Treeline Coop vs AI (Intermediate bots)
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.BOT_TT_3x3_INTERMEDIATE">
+            <summary>
+            Twisted Treeline Coop vs AI (Intermediate bots)
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.BOT_TT_3x3_INTRO">
+            <summary>
+            Twisted Treeline Coop vs AI (Intro bots)
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.BOT_TT_3x3_BEGINNER">
+            <summary>
+            Twisted Treeline Coop vs AI (Beginner bots)
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.BOT_5x5_INTRO">
+            <summary>
+            Summoner's Rift Coop vs AI Intro Bot
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.BOT_5x5_BEGINNER">
+            <summary>
+            Summoner's Rift Coop vs AI Beginner Bot
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.BOT_5x5_INTERMEDIATE">
+            <summary>
+            Summoner's Rift Coop vs AI Intermediate Bot
             </summary>
         </member>
         <member name="F:RiotNet.Models.QueueType.ARURF">
@@ -2083,6 +2133,11 @@
             </summary>
         </member>
         <member name="F:RiotNet.Models.QueueType.NEXUS_SIEGE">
+            <summary>
+            Nexus Siege
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.SIEGE">
             <summary>
             Nexus Siege
             </summary>
@@ -2115,6 +2170,36 @@
         <member name="F:RiotNet.Models.QueueType.ARURF_SNOW">
             <summary>
             All random URF (snow)
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.ONEFORALL">
+            <summary>
+            One for All
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.ODYSSEY_INTRO">
+            <summary>
+            Odyssey Extraction: Intro
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.ODYSSEY_CADET">
+            <summary>
+            Odyssey Extraction: Cadet
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.ODYSSEY_CREWMEMBER">
+            <summary>
+            Odyssey Extraction: Crewmember
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.ODYSSEY_CAPTAIN">
+            <summary>
+            Odyssey Extraction: Captain
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.QueueType.ODYSSEY_ONSLAUGHT">
+            <summary>
+            Odyssey Extraction: Onslaught
             </summary>
         </member>
         <member name="T:RiotNet.Models.Season">
@@ -2180,6 +2265,16 @@
         <member name="F:RiotNet.Models.Season.SEASON2018">
             <summary>
             Season 8, 2018
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.Season.PRESEASON2019">
+            <summary>
+            Pre-season 9, 2019
+            </summary>
+        </member>
+        <member name="F:RiotNet.Models.Season.SEASON2019">
+            <summary>
+            Season 9, 2019
             </summary>
         </member>
         <member name="T:RiotNet.Models.TeamSide">
@@ -2402,6 +2497,27 @@
             Gets or sets list of update messages for the incident.
             </summary>
         </member>
+        <member name="T:RiotNet.Models.LeagueEntry">
+            <summary>
+            Contains a summoner's rank information.
+            </summary>
+        </member>
+        <member name="P:RiotNet.Models.LeagueEntry.LeagueId">
+            <summary>
+            Gets or sets the ID of the league.
+            NOTE: this value will not be set by GetLeagueEntriesAsync(), but it may be set in the future.
+            </summary>
+        </member>
+        <member name="P:RiotNet.Models.LeagueEntry.QueueType">
+            <summary>
+            Gets or sets the league's queue type. This should equal one of the <see cref="T:RiotNet.Models.RankedQueue"/> values.
+            </summary>
+        </member>
+        <member name="P:RiotNet.Models.LeagueEntry.Tier">
+            <summary>
+            Gets or sets the league's tier. This should equal one of the <see cref="T:RiotNet.Models.Tier"/> values.
+            </summary>
+        </member>
         <member name="T:RiotNet.Models.LeagueItem">
             <summary>
             Contains league participant information representing a summoner.
@@ -2415,6 +2531,7 @@
         <member name="P:RiotNet.Models.LeagueItem.Rank">
             <summary>
             Gets or sets a Roman numeral representing the division that the participant is in.
+            This should equal one of the <see cref="T:RiotNet.Models.Division"/> values.
             </summary>
         </member>
         <member name="P:RiotNet.Models.LeagueItem.FreshBlood">
@@ -2460,6 +2577,7 @@
         <member name="P:RiotNet.Models.LeagueItem.SummonerName">
             <summary>
             Gets or sets the summoner's name.
+            NOTE: this value will not be set by GetLeagueEntriesAsync() or GetLeagueEntriesBySummonerIdAsync().
             </summary>
         </member>
         <member name="P:RiotNet.Models.LeagueItem.Wins">
@@ -2589,12 +2707,12 @@
         </member>
         <member name="P:RiotNet.Models.Mastery.Id">
             <summary>
-            Gets or sets the ID of this mastery. This corresponds to a <see cref="T:RiotNet.Models.StaticMastery"/> ID. This is equal to <see cref="P:RiotNet.Models.Mastery.MasteryId"/>, but it is set by the Summoner API.
+            Gets or sets the ID of this mastery. This is equal to <see cref="P:RiotNet.Models.Mastery.MasteryId"/>, but it is set by the Summoner API.
             </summary>
         </member>
         <member name="P:RiotNet.Models.Mastery.MasteryId">
             <summary>
-            Gets or sets the ID of this mastery. This corresponds to a <see cref="T:RiotNet.Models.StaticMastery"/> ID. This is equal to <see cref="P:RiotNet.Models.Mastery.Id"/>, but it is set by the Match and Spectator APIs.
+            Gets or sets the ID of this mastery. This is equal to <see cref="P:RiotNet.Models.Mastery.Id"/>, but it is set by the Match and Spectator APIs.
             </summary>
         </member>
         <member name="P:RiotNet.Models.Mastery.Rank">
@@ -2872,19 +2990,9 @@
             Gets or sets highest ranked tier achieved for the previous season, if any; otherwise null. Used to display border in game loading screen. This should equal one of the <see cref="T:RiotNet.Models.Tier"/> values.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.MatchParticipant.Masteries">
-            <summary>
-            Gets or sets list of mastery information.
-            </summary>
-        </member>
         <member name="P:RiotNet.Models.MatchParticipant.ParticipantId">
             <summary>
             Gets or sets the match participant ID (normally 1-10).
-            </summary>
-        </member>
-        <member name="P:RiotNet.Models.MatchParticipant.Runes">
-            <summary>
-            Gets or sets the list of rune information.
             </summary>
         </member>
         <member name="P:RiotNet.Models.MatchParticipant.Spell1Id">
@@ -3377,6 +3485,21 @@
         <member name="P:RiotNet.Models.MatchParticipantStats.Perk5Var3">
             <summary>
             Gets or sets the perk 5 var 3 value.
+            </summary>
+        </member>
+        <member name="P:RiotNet.Models.MatchParticipantStats.StatPerk0">
+            <summary>
+            Gets or sets the first Stat Perk ID.
+            </summary>
+        </member>
+        <member name="P:RiotNet.Models.MatchParticipantStats.StatPerk1">
+            <summary>
+            Gets or sets the second Stat Perk ID.
+            </summary>
+        </member>
+        <member name="P:RiotNet.Models.MatchParticipantStats.StatPerk2">
+            <summary>
+            Gets or sets the third Stat Perk ID.
             </summary>
         </member>
         <member name="P:RiotNet.Models.MatchParticipantStats.PhysicalDamageDealt">
@@ -3911,12 +4034,12 @@
         </member>
         <member name="P:RiotNet.Models.Participant.Spell1Id">
             <summary>
-             Gets or sets the ID of the first summoner spell used by this participant. This corresponds to a <see cref="T:RiotNet.Models.StaticSummonerSpell"/> ID.
+             Gets or sets the ID of the first summoner spell used by this participant.
             </summary>
         </member>
         <member name="P:RiotNet.Models.Participant.Spell2Id">
             <summary>
-             Gets or sets the ID of the second summoner spell used by this participant. This corresponds to a <see cref="T:RiotNet.Models.StaticSummonerSpell"/> ID.
+             Gets or sets the ID of the second summoner spell used by this participant.
             </summary>
         </member>
         <member name="P:RiotNet.Models.Participant.SummonerName">
@@ -4139,7 +4262,7 @@
         </member>
         <member name="P:RiotNet.Models.Rune.RuneId">
             <summary>
-            Gets or sets rune ID. This corresponds to the ID of a <see cref="T:RiotNet.Models.StaticRune"/>.
+            Gets or sets rune ID.
             </summary>
         </member>
         <member name="P:RiotNet.Models.Rune.DatabaseId">
@@ -5491,13 +5614,6 @@
             Creates a new <see cref="T:RiotNet.RateLimiter"/> instance.
             </summary>
         </member>
-        <member name="M:RiotNet.RateLimiter.#ctor(System.Int32,System.Int32)">
-            <summary>
-            Creates a new <see cref="T:RiotNet.RateLimiter"/> instance.
-            </summary>
-            <param name="rateLimitPerTenSeconds">Your API key's rate limit per 10 seconds.</param>
-            <param name="rateLimitPerTenMinutes">Your API key's rate limit per 10 minutes.</param>
-        </member>
         <member name="M:RiotNet.RateLimiter.TrySetRules(System.Collections.Generic.IEnumerable{RiotNet.RateLimitRule},System.String,System.Collections.Generic.IEnumerable{RiotNet.RateLimitRule})">
             <summary>
             Adds application-level rate limiting rules if they have not been added already.
@@ -5900,20 +6016,32 @@
             <param name="token">The cancellation token to cancel the operation.</param>
             <returns>A task representing the asynchronous operation.</returns>
         </member>
-        <member name="M:RiotNet.IRiotClient.GetLeaguesBySummonerIdAsync(System.Int64,System.String,System.Threading.CancellationToken)">
+        <member name="M:RiotNet.IRiotClient.GetLeaguePositionsBySummonerIdAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
-            Gets the full league information for all leagues that the summoners are in, including the leages for the teams they are on. Data is mapped by summoner ID. This method uses the League API.
+            Get league positions in all queues for a given summoner ID. This method uses the League API.
             </summary>
             <param name="summonerId">The summoner ID.</param>
             <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
             <param name="token">The cancellation token to cancel the operation.</param>
             <returns>A task representing the asynchronous operation.</returns>
         </member>
-        <member name="M:RiotNet.IRiotClient.GetLeaguePositionsBySummonerIdAsync(System.String,System.String,System.Threading.CancellationToken)">
+        <member name="M:RiotNet.IRiotClient.GetLeagueEntriesBySummonerIdAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
-            Get league positions in all queues for a given summoner ID. This method uses the League API.
+            Gets league entries in all queues for a given summoner ID. This method uses the League API.
             </summary>
             <param name="summonerId">The summoner ID.</param>
+            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
+            <param name="token">The cancellation token to cancel the operation.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:RiotNet.IRiotClient.GetLeagueEntriesAsync(System.String,System.String,System.String,System.Int64,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets league entries for all summoners in a particular divison. This method uses the League API.
+            </summary>
+            <param name="rankedQueueType">The queue to search. This should equal one of the <see cref="T:RiotNet.Models.RankedQueue"/> values.</param>
+            <param name="tier">The ranked tier. This should equal one of the <see cref="T:RiotNet.Models.Tier"/> values. NOTE: must be diamond league or lower. Master+ is not supported.</param>
+            <param name="division">The ranked division. This should equal one of the <see cref="T:RiotNet.Models.Division"/> values.</param>
+            <param name="page">The page number to retrieve. The default value is 1 (the first page).</param>
             <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
             <param name="token">The cancellation token to cancel the operation.</param>
             <returns>A task representing the asynchronous operation.</returns>
@@ -5979,15 +6107,6 @@
             <param name="token">The cancellation token to cancel the operation.</param>
             <returns>A task representing the asynchronous operation.</returns>
         </member>
-        <member name="M:RiotNet.IRiotClient.GetRecentMatchListByAccountIdAsync(System.Int64,System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the recent match list for an account. This method uses the Match API.
-            </summary>
-            <param name="accountId">The account ID.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-        </member>
         <member name="M:RiotNet.IRiotClient.GetMatchIdsByTournamentCodeAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Gets the list of match IDs for a tournament code. This method uses the Match API. This endpoint is only accessible if you have a tournament API key.
@@ -6023,223 +6142,6 @@
             <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
             <param name="token">The cancellation token to cancel the operation.</param>
             <returns>A task representing the asynchronous operation.</returns>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticChampionsAsync(System.String,System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the details for all champions. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="locale">Locale code for returned data. If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="dataById">If true, the returned data map will use the champions' IDs as the keys. If false, the returned data map will use the champions' keys instead.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticChampion"/> or <see cref="T:RiotNet.Models.StaticChampionList"/> objects. Only type, version, data, id, name, key, and title are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticChampionByIdAsync(System.Int32,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets champion details by ID. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="id">The champion ID.</param>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. A list of valid versions can be obtained from <see cref="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticChampion"/> object. Only id, name, key, and title are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticItemsAsync(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets a list of all available items. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticItem"/> or <see cref="T:RiotNet.Models.StaticItemList"/> objects. Only id, name, type, version, basic, data, plaintext, group, and description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticItemAsync(System.Int32,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets an item by its ID. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="id">The item ID.</param>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticItem"/> or <see cref="T:RiotNet.Models.StaticItemList"/> objects. Only id, name, type, version, basic, data, plaintext, group, and description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets a list of available languages. This method uses the LoL Static Data API.
-            </summary>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticLanguageStringsAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets a list of available language strings. This method uses the LoL Static Data API.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticMapsAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets a list of all maps. This method uses the LoL Static Data API.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticMasteriesAsync(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the details for all masteries. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticMastery"/> or <see cref="T:RiotNet.Models.StaticMasteryList"/> objects. Only type, version, data, id, name, and description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticMasteryByIdAsync(System.Int32,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets mastery details by ID. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="id">The mastery ID.</param>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. A list of valid versions can be obtained from <see cref="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticMastery"/> object. Only id, name, description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticProfileIconsAsync(System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the profile icon data. This method uses the LoL Static Data API.
-            </summary>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticRealmAsync(System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the realm data. This method uses the LoL Static Data API.
-            </summary>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticRunesAsync(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets a list of all available runes. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticRune"/> or <see cref="T:RiotNet.Models.StaticRuneList"/> objects. Only type, version, data, id, name, rune, and description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticRuneByIdAsync(System.Int32,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets a rune by ID. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="id">The rune ID.</param>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. A list of valid versions can be obtained from <see cref="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticRune"/> object. Only id, name, rune, and description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticSummonerSpellsAsync(System.String,System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the details for all summoner spells. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="dataById">If true, the returned data map will use the spells' IDs as the keys. If false, the returned data map will use the spells' keys instead.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticSummonerSpell"/> or <see cref="T:RiotNet.Models.StaticSummonerSpellList"/> objects. Only type, version, data, id, key, name, description, and summonerLevel are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetStaticSummonerSpellByIdAsync(System.Int32,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets summoner spell details by ID. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="id">The summoner spell ID.</param>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. A list of valid versions can be obtained from <see cref="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticSummonerSpell"/> object. Only id, key, name, description, and summonerLevel are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.IRiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the list of available game versions. This method uses the LoL Static Data API.
-            </summary>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.IRiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
         </member>
         <member name="M:RiotNet.IRiotClient.GetShardDataAsync(System.String,System.Threading.CancellationToken)">
             <summary>
@@ -6817,20 +6719,32 @@
             <param name="token">The cancellation token to cancel the operation.</param>
             <returns>A task representing the asynchronous operation.</returns>
         </member>
-        <member name="M:RiotNet.RiotClient.GetLeaguesBySummonerIdAsync(System.Int64,System.String,System.Threading.CancellationToken)">
+        <member name="M:RiotNet.RiotClient.GetLeaguePositionsBySummonerIdAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
-            Gets the full league information for all leagues that the summoners are in, including the leages for the teams they are on. Data is mapped by summoner ID. This method uses the League API.
+            Get league positions in all queues for a given summoner ID. This method uses the League API.
             </summary>
             <param name="summonerId">The summoner ID.</param>
             <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
             <param name="token">The cancellation token to cancel the operation.</param>
             <returns>A task representing the asynchronous operation.</returns>
         </member>
-        <member name="M:RiotNet.RiotClient.GetLeaguePositionsBySummonerIdAsync(System.String,System.String,System.Threading.CancellationToken)">
+        <member name="M:RiotNet.RiotClient.GetLeagueEntriesBySummonerIdAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
-            Get league positions in all queues for a given summoner ID. This method uses the League API.
+            Get league entries in all queues for a given summoner ID. This method uses the League API.
             </summary>
             <param name="summonerId">The summoner ID.</param>
+            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
+            <param name="token">The cancellation token to cancel the operation.</param>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:RiotNet.RiotClient.GetLeagueEntriesAsync(System.String,System.String,System.String,System.Int64,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets league entries for all summoners in a particular divison. This method uses the League API.
+            </summary>
+            <param name="rankedQueueType">The queue to search. This should equal one of the <see cref="T:RiotNet.Models.RankedQueue"/> values.</param>
+            <param name="tier">The ranked tier. This should equal one of the <see cref="T:RiotNet.Models.Tier"/> values.</param>
+            <param name="division">The ranked division. This should equal one of the <see cref="T:RiotNet.Models.Division"/> values.</param>
+            <param name="page">The page number to retrieve. The default value is 1 (the first page).</param>
             <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
             <param name="token">The cancellation token to cancel the operation.</param>
             <returns>A task representing the asynchronous operation.</returns>
@@ -6896,15 +6810,6 @@
             <param name="token">The cancellation token to cancel the operation.</param>
             <returns>A task representing the asynchronous operation.</returns>
         </member>
-        <member name="M:RiotNet.RiotClient.GetRecentMatchListByAccountIdAsync(System.Int64,System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the recent match list for an account. This method uses the Match API.
-            </summary>
-            <param name="accountId">The account ID.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-        </member>
         <member name="M:RiotNet.RiotClient.GetMatchIdsByTournamentCodeAsync(System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Gets the list of match IDs for a tournament code. This method uses the Match API.
@@ -6940,224 +6845,6 @@
             <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
             <param name="token">The cancellation token to cancel the operation.</param>
             <returns>A task representing the asynchronous operation.</returns>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticChampionsAsync(System.String,System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the details for all champions. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="dataById">If true, the returned data map will use the champions' IDs as the keys. If false, the returned data map will use the champions' keys instead.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticChampion"/> or <see cref="T:RiotNet.Models.StaticChampionList"/> objects. Only type, version, data, id, name, key, and title are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticChampionByIdAsync(System.Int32,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets champion details by ID. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="id">The champion ID.</param>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. A list of valid versions can be obtained from <see cref="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticChampion"/> object. Only id, name, key, and title are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticItemsAsync(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets a list of all available items. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticItem"/> or <see cref="T:RiotNet.Models.StaticItemList"/> objects. Only id, name, type, version, basic, data, plaintext, group, and description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticItemAsync(System.Int32,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets an item by its ID. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="id">The item ID.</param>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticItem"/> or <see cref="T:RiotNet.Models.StaticItemList"/> objects. Only id, name, type, version, basic, data, plaintext, group, and description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets a list of available languages. This method uses the LoL Static Data API.
-            </summary>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticLanguageStringsAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets a list of available language strings. This method uses the LoL Static Data API.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticMapsAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets a list of all maps. This method uses the LoL Static Data API.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticMasteriesAsync(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the details for all masteries. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticMastery"/> or <see cref="T:RiotNet.Models.StaticMasteryList"/> objects. Only type, version, data, id, name, and description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticMasteryByIdAsync(System.Int32,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets mastery details by ID. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="id">The mastery ID.</param>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. A list of valid versions can be obtained from <see cref="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticMastery"/> object. Only id, name, description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticProfileIconsAsync(System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the profile icon data. This method uses the LoL Static Data API.
-            </summary>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Note that you can use avatar.leagueoflegends.com to get anyone's profile icon using the format http://avatar.leagueoflegends.com/region/name.png (e.g., http://avatar.leagueoflegends.com/NA/RiotSchmick.png).
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticRealmAsync(System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the realm data. This method uses the LoL Static Data API.
-            </summary>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticRunesAsync(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets a list of all available runes. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticRune"/> or <see cref="T:RiotNet.Models.StaticRuneList"/> objects. Only type, version, data, id, name, rune, and description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticRuneByIdAsync(System.Int32,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets a rune by ID. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="id">The rune ID.</param>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. A list of valid versions can be obtained from <see cref="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticRune"/> object. Only id, name, rune, and description are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticSummonerSpellsAsync(System.String,System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the details for all summoner spells. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. List of valid versions can be obtained from <see cref="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="dataById">If true, the returned data map will use the spells' IDs as the keys. If false, the returned data map will use the spells' keys instead.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticSummonerSpell"/> or <see cref="T:RiotNet.Models.StaticSummonerSpellList"/> objects. Only type, version, data, id, key, name, description, and summonerLevel are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetStaticSummonerSpellByIdAsync(System.Int32,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets summoner spell details by ID. This method uses the LoL Static Data API. NOTE: Most properties are not returned by default! Use the tags parameter to specify which properties you want.
-            </summary>
-            <param name="id">The summoner spell ID.</param>
-            <param name="locale">Locale code for returned data (e.g., en_US, es_ES). If not specified, the default locale for the region is used. This should equal one of the <see cref="T:RiotNet.Models.Locale"/> values, or one of the values returned by <see cref="M:RiotNet.IRiotClient.GetStaticLanguagesAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="version">The game version for returned data. If not specified, the latest version for the region is used. A list of valid versions can be obtained from <see cref="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)"/>.</param>
-            <param name="tags">Tags to return additional data. Valid tags are any property of the <see cref="T:RiotNet.Models.StaticSummonerSpell"/> object. Only id, key, name, description, and summonerLevel are returned by default if this parameter isn't specified. To return all additional data, use the tag 'all'.</param>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
-        </member>
-        <member name="M:RiotNet.RiotClient.GetVersionsAsync(System.String,System.Threading.CancellationToken)">
-            <summary>
-            Gets the list of available game versions. This method uses the LoL Static Data API.
-            </summary>
-            <param name="platformId">The platform ID of the server to connect to. This should equal one of the <see cref="T:RiotNet.Models.PlatformId"/> values. If unspecified, the <see cref="P:RiotNet.RiotClient.PlatformId"/> property will be used.</param>
-            <param name="token">The cancellation token to cancel the operation.</param>
-            <returns>A task representing the asynchronous operation.</returns>
-            <remarks>
-            Calls to this method will not count toward your API rate limit.
-            </remarks>
         </member>
         <member name="M:RiotNet.RiotClient.GetShardDataAsync(System.String,System.Threading.CancellationToken)">
             <summary>

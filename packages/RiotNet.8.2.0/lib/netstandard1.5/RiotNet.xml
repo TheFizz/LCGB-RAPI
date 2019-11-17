@@ -42,13 +42,6 @@
             <param name="message">A message that describes the error.</param>
             <param name="innerException">The exception that is the cause of the current exception.</param>
         </member>
-        <member name="M:RiotNet.ConnectionFailedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Creates a new <see cref="T:RiotNet.ConnectionFailedException"/> instance.
-            </summary>
-            <param name="info">The SerializationInfo that holds the serialized object data about the exception.</param>
-            <param name="context">The StreamingContext that contains contextual information about the source or destination.</param>
-        </member>
         <member name="T:RiotNet.Conversions">
             <summary>
             Contains functions for converting values.
@@ -346,11 +339,6 @@
             Gets or sets the height of the image.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.AltImage.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.AltImage"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.BannedChampion">
             <summary>
             Contains information about a banned champion.
@@ -369,11 +357,6 @@
         <member name="P:RiotNet.Models.BannedChampion.TeamId">
             <summary>
             Gets or sets the team that banned the champion. This property is only set correctly by the Spectator API (active games and featured games).
-            </summary>
-        </member>
-        <member name="P:RiotNet.Models.BannedChampion.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.BannedChampion"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
             </summary>
         </member>
         <member name="T:RiotNet.Models.BasicData">
@@ -604,11 +587,6 @@
             Gets or sets the type (or internal name) of the block.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.Block.DatabaseId">
-            <summary>
-            Gets or sets the ID of the current <see cref="T:RiotNet.Models.Block"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.BlockItem">
             <summary>
             Represents an item on an item page.
@@ -622,11 +600,6 @@
         <member name="P:RiotNet.Models.BlockItem.Count">
             <summary>
             Gets or sets the count of the specified item that is in this slot.
-            </summary>
-        </member>
-        <member name="P:RiotNet.Models.BlockItem.DatabaseId">
-            <summary>
-            Gets or sets the ID of the current <see cref="T:RiotNet.Models.BlockItem"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
             </summary>
         </member>
         <member name="T:RiotNet.Models.Champion">
@@ -727,11 +700,6 @@
         <member name="P:RiotNet.Models.ChampionMastery.TokensEarned">
             <summary>
             Gets or sets the number of mastery level 6 or 7 tokens earned.
-            </summary>
-        </member>
-        <member name="P:RiotNet.Models.ChampionMastery.DatabaseId">
-            <summary>
-            Gets or sets the ID of the current <see cref="T:RiotNet.Models.ChampionMastery"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
             </summary>
         </member>
         <member name="T:RiotNet.Models.AscendedType">
@@ -2427,11 +2395,6 @@
             Gets or sets the name of the group.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.Group.DatabaseId">
-            <summary>
-            Gets or sets the ID of the current <see cref="T:RiotNet.Models.Group"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.Image">
             <summary>
             Contains image data.
@@ -2585,11 +2548,6 @@
             Gets or sets the number of wins that the participant has.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.LeagueItem.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.LeagueItem"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.LeagueList">
             <summary>
             Represents a ranked league.
@@ -2685,11 +2643,6 @@
             Gets or sets time at which the event occurred.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.LobbyEvent.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.LobbyEvent"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.LobbyEventWrapper">
             <summary>
             Contains a list of lobby events.
@@ -2718,11 +2671,6 @@
         <member name="P:RiotNet.Models.Mastery.Rank">
             <summary>
             Gets or sets the number of mastery points put into this mastery.
-            </summary>
-        </member>
-        <member name="P:RiotNet.Models.Mastery.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.Mastery"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
             </summary>
         </member>
         <member name="T:RiotNet.Models.Match">
@@ -2918,11 +2866,6 @@
             Gets or sets the ward type of the event. Only present if relevant. This should equal one of the <see cref="T:RiotNet.Models.WardType"/> values.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.MatchEvent.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.MatchEvent"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.MatchFrame">
             <summary>
             This object contains game frame information.
@@ -2941,11 +2884,6 @@
         <member name="P:RiotNet.Models.MatchFrame.Timestamp">
             <summary>
             Gets or sets game time at which the frame occurred.
-            </summary>
-        </member>
-        <member name="P:RiotNet.Models.MatchFrame.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.MatchFrame"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
             </summary>
         </member>
         <member name="T:RiotNet.Models.MatchList">
@@ -3025,11 +2963,6 @@
             Diff fields refer to the deltas versus the calculated lane opponent(s).
             </remarks>
         </member>
-        <member name="P:RiotNet.Models.MatchParticipant.DatabaseId">
-            <summary>
-            Gets or sets the ID of the current <see cref="T:RiotNet.Models.MatchParticipant"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.MatchParticipantFrame">
             <summary>
             This object contains participant frame information.
@@ -3085,11 +3018,6 @@
             Gets or sets experience earned by participant.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.MatchParticipantFrame.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.MatchParticipantFrame"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.MatchParticipantFrameCollection">
             <summary>
             A collection of <see cref="T:RiotNet.Models.MatchParticipantFrame"/>, mapped by participant ID.
@@ -3115,11 +3043,6 @@
         <member name="P:RiotNet.Models.MatchParticipantIdentity.Player">
             <summary>
             Gets or sets player information.
-            </summary>
-        </member>
-        <member name="P:RiotNet.Models.MatchParticipantIdentity.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.MatchParticipantIdentity"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
             </summary>
         </member>
         <member name="T:RiotNet.Models.MatchParticipantStats">
@@ -3892,11 +3815,6 @@
             Gets or sets a flag indicating whether or not the team won.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.MatchTeam.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.MatchTeam"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.MatchTimeline">
             <summary>
             This object contains game timeline information.
@@ -3910,11 +3828,6 @@
         <member name="P:RiotNet.Models.MatchTimeline.Frames">
             <summary>
             Gets or sets list of timeline frames for the game.
-            </summary>
-        </member>
-        <member name="P:RiotNet.Models.MatchTimeline.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.MatchTimeline"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
             </summary>
         </member>
         <member name="T:RiotNet.Models.Message">
@@ -4180,11 +4093,6 @@
              Gets or sets the team id associated with player (team 1 or team 2).
             </summary>
         </member>
-        <member name="P:RiotNet.Models.Player.DatabaseId">
-            <summary>
-            Gets or sets the ID of the current <see cref="T:RiotNet.Models.Player"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.Position">
             <summary>
             This object contains participant frame position information.
@@ -4240,11 +4148,6 @@
             Gets or sets the type of item set. This value appears to always equal "riot".
             </summary>
         </member>
-        <member name="P:RiotNet.Models.Recommended.DatabaseId">
-            <summary>
-            Gets or sets the ID of the current item set. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.Rune">
             <summary>
             Represents a rune on a player's rune page.
@@ -4263,11 +4166,6 @@
         <member name="P:RiotNet.Models.Rune.RuneId">
             <summary>
             Gets or sets rune ID.
-            </summary>
-        </member>
-        <member name="P:RiotNet.Models.Rune.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.Rune"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
             </summary>
         </member>
         <member name="T:RiotNet.Models.RuneDataStats">
@@ -4545,11 +4443,6 @@
             Gets or sets the ability with which this spell variable ranks up. If unspecified, it ranks up with the current ability.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.SpellVars.DatabaseId">
-            <summary>
-            Gets or sets the ID of the current <see cref="T:RiotNet.Models.SpellVars"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.StaticChampion">
             <summary>
             Contains champion data.
@@ -4693,11 +4586,6 @@
         <member name="P:RiotNet.Models.StaticChampionSpell.AltImages">
             <summary>
             Gets or sets the alternate image data for the current ability.
-            </summary>
-        </member>
-        <member name="P:RiotNet.Models.StaticChampionSpell.DatabaseId">
-            <summary>
-            Gets or sets the ID of the current <see cref="T:RiotNet.Models.StaticChampionSpell"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
             </summary>
         </member>
         <member name="T:RiotNet.Models.StaticDataList`1">
@@ -4851,11 +4739,6 @@
             Gets or sets the item tree tags.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.StaticItemTree.DatabaseId">
-            <summary>
-            Gets or sets the ID of the current <see cref="T:RiotNet.Models.StaticItemTree"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.StaticLanuageStrings">
             <summary>
             Contains strings in a specified language.
@@ -4982,11 +4865,6 @@
             Gets or sets the Resolve mastery tree.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.StaticMasteryTree.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.StaticMasteryTree"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.StaticMasteryTreeItem">
             <summary>
             Represents one item in a mastery tree list.
@@ -5003,11 +4881,6 @@
             Season 6-7 do not have any masteries with prerequisites.
             </summary>
         </member>
-        <member name="P:RiotNet.Models.StaticMasteryTreeItem.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.StaticMasteryTreeItem"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
-            </summary>
-        </member>
         <member name="T:RiotNet.Models.StaticMasteryTreeList">
             <summary>
             Represents one row in a mastery tree.
@@ -5016,11 +4889,6 @@
         <member name="P:RiotNet.Models.StaticMasteryTreeList.MasteryTreeItems">
             <summary>
             Gets or sets the items in the current <see cref="T:RiotNet.Models.StaticMasteryTreeList"/>.
-            </summary>
-        </member>
-        <member name="P:RiotNet.Models.StaticMasteryTreeList.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.StaticMasteryTreeList"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
             </summary>
         </member>
         <member name="T:RiotNet.Models.StaticProfileIcon">
@@ -5096,11 +4964,6 @@
         <member name="P:RiotNet.Models.StaticRealm.V">
             <summary>
             Gets or sets the current version of this realm.
-            </summary>
-        </member>
-        <member name="P:RiotNet.Models.StaticRealm.DatabaseId">
-            <summary>
-            Gets or sets the ID of the <see cref="T:RiotNet.Models.StaticRealm"/>. This does NOT come from the Riot API; it is used as a key when storing this object in a database.
             </summary>
         </member>
         <member name="T:RiotNet.Models.StaticRune">
@@ -5544,13 +5407,6 @@
             <param name="message">A message that describes the error.</param>
             <param name="innerException">The exception that is the cause of the current exception.</param>
         </member>
-        <member name="M:RiotNet.NotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Creates a new <see cref="T:RiotNet.NotFoundException"/> instance.
-            </summary>
-            <param name="info">The SerializationInfo that holds the serialized object data about the exception.</param>
-            <param name="context">The StreamingContext that contains contextual information about the source or destination.</param>
-        </member>
         <member name="T:RiotNet.IRateLimiter">
             <summary>
             Handles proactive rate limiting. You should only ever create one instance of this interface.
@@ -5721,13 +5577,6 @@
             <param name="message">A message that describes the error.</param>
             <param name="innerException">The exception that is the cause of the current exception.</param>
         </member>
-        <member name="M:RiotNet.RateLimitExceededException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Creates a new <see cref="T:RiotNet.RateLimitExceededException"/> instance.
-            </summary>
-            <param name="info">The SerializationInfo that holds the serialized object data about the exception.</param>
-            <param name="context">The StreamingContext that contains contextual information about the source or destination.</param>
-        </member>
         <member name="T:RiotNet.ReflectionUtils">
             <summary>
             Contains reflection-related helper methods.
@@ -5823,20 +5672,6 @@
             <param name="message">A message that describes the error.</param>
             <param name="innerException">The exception that is the cause of the current exception.</param>
         </member>
-        <member name="M:RiotNet.RestException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Creates a new <see cref="T:RiotNet.RestException"/> instance.
-            </summary>
-            <param name="info">The SerializationInfo that holds the serialized object data about the exception.</param>
-            <param name="context">The StreamingContext that contains contextual information about the source or destination.</param>
-        </member>
-        <member name="M:RiotNet.RestException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Populates the SerializationInfo with information about the exception.
-            </summary>
-            <param name="info">The SerializationInfo that holds the serialized object data about the exception.</param>
-            <param name="context">The StreamingContext that contains contextual information about the source or destination.</param>
-        </member>
         <member name="P:RiotNet.RestException.Response">
             <summary>
             Gets the response.
@@ -5879,13 +5714,6 @@
             <param name="response">The response.</param>
             <param name="message">A message that describes the error.</param>
             <param name="innerException">The exception that is the cause of the current exception.</param>
-        </member>
-        <member name="M:RiotNet.RestTimeoutException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Creates a new <see cref="T:RiotNet.RestTimeoutException"/> instance.
-            </summary>
-            <param name="info">The SerializationInfo that holds the serialized object data about the exception.</param>
-            <param name="context">The StreamingContext that contains contextual information about the source or destination.</param>
         </member>
         <member name="T:RiotNet.RetryEventHandler">
             <summary>
